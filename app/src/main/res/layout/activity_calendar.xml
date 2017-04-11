@@ -15,10 +15,24 @@
     </CalendarView>
     <TextView
 
-        android:textSize="40sp"
+        android:textSize="20sp"
         android:id="@+id/tv_Calendar"
-        android:text="Hello"
+        android:text=""
         android:layout_width="match_parent"
-        android:layout_height="150dp"/>
+        android:layout_height="50dp"/>
+
+    <TextView
+        android:id="@+id/tv_setEvent"
+        android:textSize="30sp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"/>
+
+    <EditText
+        android:id="@+id/tv_edit"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"/>
+
+
 
 </LinearLayout>

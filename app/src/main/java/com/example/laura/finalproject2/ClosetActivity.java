@@ -4,6 +4,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 import com.example.laura.finalproject2.adapter.ViewPagerAdapter;
 import com.example.laura.finalproject2.fragment.FragmentHat1;
@@ -13,8 +16,10 @@ import com.example.laura.finalproject2.fragment.FragmentTop2;
 import java.util.ArrayList;
 
 public class ClosetActivity extends AppCompatActivity {
-    private ViewPager topsViewPager;
-    private ViewPager headWearViewPager;
+    private int checkedID;
+    private RadioGroup rdg;
+    ImageView imageView;
+
 
     private ArrayList<Fragment> fragmentList = new ArrayList<Fragment>();
 
@@ -22,31 +27,31 @@ public class ClosetActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_closet);
-        topsView();
-        //headWearView();
-    }
-
-    public void topsView(){
-        topsViewPager = (ViewPager) findViewById(R.id.tops_view_pager);
-        fragmentList.add(new FragmentTop1());
-        fragmentList.add(new FragmentTop2());
-
-        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(this.getSupportFragmentManager());
-        viewPagerAdapter.setContent(fragmentList);
-        topsViewPager.setAdapter(viewPagerAdapter);
-
+        changeView();
 
     }
 
-    public void headWearView(){
-        headWearViewPager = (ViewPager) findViewById(R.id.headwear_view_pager);
-        //fragmentList.add(new FragmentHat1());
+    public void changeView(){
 
-        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(this.getSupportFragmentManager());
-        viewPagerAdapter.setContent(fragmentList);
-        headWearViewPager.setAdapter(viewPagerAdapter);
+        rdg = (RadioGroup) findViewById(R.id.rdg_closet);
+
+
+        checkedID = rdg.getCheckedRadioButtonId();
+
+        switch (checkedID){
+            case R.id.rb_sunny : imageView.setBackgroundResource(R.drawable.cap1);
+                                    break;
+            case R.id.rb_rainy: imageView.setBackgroundResource(R.drawable.outfit1);
+                                    break;
+        }
+
+
+
+
 
     }
+
+
 
 
 }

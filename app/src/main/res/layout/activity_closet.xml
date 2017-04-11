@@ -8,36 +8,43 @@
     android:background="@color/black"
     tools:context="com.example.laura.finalproject2.ClosetActivity">
 
-    <LinearLayout
-        android:id="@+id/top_view_pager"
+<ImageView
+    android:layout_centerInParent="true"
+    android:layout_centerHorizontal="true"
+    android:layout_alignParentRight="true"
+    android:layout_width="250dp"
+    android:layout_height="400dp"/>
 
-        android:layout_width="match_parent"
-        android:layout_height="100dp">
+    <FrameLayout
+        android:layout_width="135dp"
+        android:layout_height="match_parent">
 
-        <android.support.v4.view.ViewPager
-            android:id="@+id/headwear_view_pager"
+    <RadioGroup
+        android:id="@+id/rdg_closet"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:layout_width="135dp"
+        android:layout_height="match_parent">
+
+        <RadioButton
+            android:id="@+id/rb_sunny"
+            android:text="Sunny/Warm"
             android:layout_width="match_parent"
-            android:layout_height="100dp">
-
-        </android.support.v4.view.ViewPager>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/second"
-        android:layout_below="@+id/top_view_pager"
-        android:layout_width="match_parent"
-        android:layout_height="100dp">
-
-        <android.support.v4.view.ViewPager
-            android:id="@+id/tops_view_pager"
+            android:layout_height="wrap_content"/>
+        <RadioButton
+            android:id="@+id/rb_rainy"
+            android:text="Rainy"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"/>
+        <RadioButton
+            android:id="@+id/rb_cold"
+            android:text="Cold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
-        </android.support.v4.view.ViewPager>
+    </RadioGroup>
 
-    </LinearLayout>
-
+    </FrameLayout>
 
 
 </RelativeLayout>

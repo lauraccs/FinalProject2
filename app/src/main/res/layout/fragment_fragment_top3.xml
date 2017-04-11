@@ -2,7 +2,7 @@
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             tools:context="com.example.laura.finalproject2.fragment.FragmentTop1">
+             tools:context="com.example.laura.finalproject2.fragment.FragmentTop3">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
@@ -12,6 +12,6 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/outfit1"/>
+        android:src="@drawable/outfit4"/>
 
 </FrameLayout>

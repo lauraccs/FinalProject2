@@ -59,17 +59,17 @@ public class ListViewAdapter extends BaseAdapter {
         }else {
             holder = (ViewHolder) convertView.getTag();
         }
-        holder.textView1.setText("activity");
-        holder.textView2.setText("yay");
-        holder.textView3.setText("fun");
+        holder.textView1.setText(String.valueOf(position));
+        holder.textView2.setText(listResult.get(position));
+        holder.textView3.setText(String.valueOf(position));
 
         if(position%2==0){
-            holder.textView1.setVisibility(View.VISIBLE);
+            holder.textView1.setVisibility(View.INVISIBLE);
             holder.textView3.setVisibility(View.INVISIBLE);
 
         }else {
 
-            holder.textView3.setVisibility(View.VISIBLE);
+            holder.textView3.setVisibility(View.INVISIBLE);
             holder.textView1.setVisibility(View.INVISIBLE);
 
         }

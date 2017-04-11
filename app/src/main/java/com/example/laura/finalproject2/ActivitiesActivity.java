@@ -18,6 +18,9 @@ import com.example.laura.finalproject2.adapter.ListViewAdapter;
 import com.example.laura.finalproject2.adapter.ViewPagerAdapter;
 import com.example.laura.finalproject2.fragment.FragmentHat1;
 import com.example.laura.finalproject2.fragment.FragmentTop1;
+import com.example.laura.finalproject2.fragment.FragmentTop2;
+import com.example.laura.finalproject2.fragment.FragmentTop3;
+import com.example.laura.finalproject2.fragment.FragmentTop4;
 
 import java.util.ArrayList;
 
@@ -40,23 +43,17 @@ public class ActivitiesActivity extends AppCompatActivity implements AdapterView
     }
 
     private void createFakeResult() {
-        listResult.add("AAAAAAAAAA");
-        listResult.add("BBBBBBB");
-        listResult.add("CDDDD");
-        listResult.add("DDDDDDDDDDD");
-        listResult.add("EE");
-        listResult.add("FF");
-        listResult.add("GGG");
-        listResult.add("H");
-        listResult.add("I");
-        listResult.add("J");
-        listResult.add("K");
-        listResult.add("L");
-        listResult.add("M");
-        listResult.add("N");
-        listResult.add("O");
-        listResult.add("P");
-        listResult.add("Q");
+        listResult.add("Study");
+        listResult.add("Netflix");
+        listResult.add("Exercise");
+        listResult.add("Feed Cat");
+        listResult.add("Dinner with Friends");
+        listResult.add("Go to Museum");
+        listResult.add("Go to movies");
+        listResult.add("Shopping");
+        listResult.add("Practice art/instrument");
+
+
 
 
     }
@@ -69,7 +66,10 @@ public class ActivitiesActivity extends AppCompatActivity implements AdapterView
 
         viewPager = (ViewPager)view.findViewById(R.id.header_view_pager);
         fragmentList.add(new FragmentTop1());
+        fragmentList.add(new FragmentTop2());
         fragmentList.add(new FragmentHat1());
+        fragmentList.add(new FragmentTop3());
+        fragmentList.add(new FragmentTop4());
 
 
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(this.getSupportFragmentManager());
@@ -79,7 +79,7 @@ public class ActivitiesActivity extends AppCompatActivity implements AdapterView
         ListViewAdapter listViewAdapter = new ListViewAdapter(this, listResult);
 
         TextView tv = new TextView(this);
-        tv.setText("We have no more content");
+        tv.setText(":)");
         tv.setTextSize(28);
         tv.setGravity(Gravity.CENTER);
         listView.addFooterView(tv);
