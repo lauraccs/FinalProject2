@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.View;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.LinearLayout;
@@ -30,6 +33,7 @@ public class ActivitiesActivity extends AppCompatActivity implements AdapterView
     private ArrayList<String> listResult;
     private ArrayList<Fragment> fragmentList = new ArrayList<Fragment>();
     private ViewPager viewPager;
+    private WebView headerWV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,17 +68,33 @@ public class ActivitiesActivity extends AppCompatActivity implements AdapterView
         View view = getLayoutInflater().inflate(R.layout.activities_header,null);
         LinearLayout activitiesHeader = (LinearLayout)view.findViewById(R.id.activities_header);
 
-        viewPager = (ViewPager)view.findViewById(R.id.header_view_pager);
-        fragmentList.add(new FragmentTop1());
-        fragmentList.add(new FragmentTop2());
-        fragmentList.add(new FragmentHat1());
-        fragmentList.add(new FragmentTop3());
-        fragmentList.add(new FragmentTop4());
+        headerWV = (WebView)view.findViewById(R.id.header_webview);
+        headerWV.getSettings().getJavaScriptEnabled();
+        headerWV.setFocusable(true);
+        headerWV.setFocusableInTouchMode(true);
+        headerWV.getSettings().setRenderPriority(WebSettings.RenderPriority.HIGH);
+        headerWV.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);
+        headerWV.getSettings().setDomStorageEnabled(true);
+        headerWV.getSettings().setDatabaseEnabled(true);
+        headerWV.getSettings().setAppCacheEnabled(true);
+        headerWV.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
+        headerWV.loadUrl("https://tinyurl.com/kdessau");
+        headerWV.setWebViewClient(new WebViewClient());
 
 
-        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(this.getSupportFragmentManager());
-        viewPagerAdapter.setContent(fragmentList);
-        viewPager.setAdapter(viewPagerAdapter);
+
+//
+//        viewPager = (ViewPager)view.findViewById(R.id.header_view_pager);
+//        fragmentList.add(new FragmentTop1());
+//        fragmentList.add(new FragmentTop2());
+//        fragmentList.add(new FragmentHat1());
+//        fragmentList.add(new FragmentTop3());
+//        fragmentList.add(new FragmentTop4());
+//
+//
+//        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(this.getSupportFragmentManager());
+//        viewPagerAdapter.setContent(fragmentList);
+//        viewPager.setAdapter(viewPagerAdapter);
 
         ListViewAdapter listViewAdapter = new ListViewAdapter(this, listResult);
 
@@ -93,7 +113,7 @@ public class ActivitiesActivity extends AppCompatActivity implements AdapterView
         final int width = displayMetrics.widthPixels;
 
 
-        AbsListView.LayoutParams headerViewParams = new AbsListView.LayoutParams(width, 300);
+        AbsListView.LayoutParams headerViewParams = new AbsListView.LayoutParams(width, 500);
         activitiesHeader.setLayoutParams(headerViewParams);
 
 

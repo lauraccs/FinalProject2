@@ -16,7 +16,7 @@ public class MainActivity extends BaseActivity {
     private Button btCalendar;
     private Button btActivities;
     private Button btWeather;
-//    private Button btCloset;
+    private Button btCloset;
     private WebView wvHome;
 
 
@@ -54,8 +54,7 @@ public class MainActivity extends BaseActivity {
         btCalendar = (Button) findViewById(R.id.bt_schedule);
         btActivities = (Button) findViewById(R.id.bt_activities);
         btWeather = (Button) findViewById(R.id.bt_weather);
-//        btCloset = (Button) findViewById(R.id.bt_Closet);
-
+        btCloset = (Button) findViewById(R.id.bt_closet);
 
 
     }
@@ -83,12 +82,12 @@ public class MainActivity extends BaseActivity {
             }
         });
 
-//        btCloset.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                toActivity(ClosetActivity.class);
-//            }
-//        });
+        btCloset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toActivity(ClosetActivity.class);
+            }
+        });
 
 
 

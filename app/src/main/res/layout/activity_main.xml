@@ -16,23 +16,28 @@
         <Button
             android:id="@+id/bt_weather"
             android:text="Weather"
-            android:layout_width="100dp"
+            android:layout_width="95dp"
             android:layout_height="50dp"/>
 
 
         <Button
-            android:layout_marginLeft="30dp"
+
             android:id="@+id/bt_schedule"
             android:text="Schedule"
-            android:layout_width="100dp"
+            android:layout_width="95dp"
             android:layout_height="50dp"/>
 
         <Button
-            android:layout_marginLeft="30dp"
+
             android:id="@+id/bt_activities"
-            android:text="Activities"
-            android:layout_width="100dp"
+            android:text="TTD"
+            android:layout_width="95dp"
             android:layout_height="50dp"/>
+        <Button
+            android:layout_width="95dp"
+            android:layout_height="50dp"
+            android:id="@+id/bt_closet"
+            android:text="Closet"/>
 
 
 

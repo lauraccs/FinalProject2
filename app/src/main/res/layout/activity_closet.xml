@@ -5,46 +5,257 @@
     android:id="@+id/activity_closet"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+    android:background="@color/white"
     tools:context="com.example.laura.finalproject2.ClosetActivity">
 
-<ImageView
-    android:layout_centerInParent="true"
-    android:layout_centerHorizontal="true"
-    android:layout_alignParentRight="true"
-    android:layout_width="250dp"
-    android:layout_height="400dp"/>
+    <FrameLayout
+        android:id="@+id/fl_middle_top"
+        android:layout_marginLeft="135dp"
+        android:layout_width="50dp"
+        android:layout_height="140dp">
+
+        <Button
+            android:id="@+id/bt_closet_ok"
+            android:text=">>"
+            android:layout_centerInParent="true"
+            android:layout_alignParentBottom="true"
+            android:layout_width="40dp"
+            android:layout_height="50dp"/>
+
+    </FrameLayout>
 
     <FrameLayout
-        android:layout_width="135dp"
-        android:layout_height="match_parent">
+    android:layout_below="@+id/fl_middle_top"
+    android:id="@+id/fl_middle_two"
+    android:layout_marginLeft="135dp"
+    android:layout_width="50dp"
+    android:layout_height="140dp">
+
+    <Button
+        android:id="@+id/bt_closet_two"
+        android:text=">>"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="40dp"
+        android:layout_height="50dp"/>
+
+</FrameLayout>
+
+    <FrameLayout
+        android:layout_below="@+id/fl_middle_two"
+        android:id="@+id/fl_middle_three"
+        android:layout_marginLeft="135dp"
+        android:layout_width="50dp"
+        android:layout_height="140dp">
+
+        <Button
+            android:id="@+id/bt_closet_three"
+            android:text=">>"
+            android:layout_centerInParent="true"
+            android:layout_alignParentBottom="true"
+            android:layout_width="40dp"
+            android:layout_height="50dp"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_below="@+id/fl_middle_three"
+        android:id="@+id/fl_middle_four"
+        android:layout_marginLeft="135dp"
+        android:layout_width="50dp"
+        android:layout_height="140dp">
+
+        <Button
+            android:id="@+id/bt_closet_four"
+            android:text=">>"
+            android:layout_centerInParent="true"
+            android:layout_alignParentBottom="true"
+            android:layout_width="40dp"
+            android:layout_height="50dp"/>
+
+    </FrameLayout>
+
+
+    <ImageView
+    android:id="@+id/view_closet"
+    android:layout_alignParentTop="true"
+    android:layout_centerInParent="true"
+    android:layout_alignParentRight="true"
+    android:layout_width="200dp"
+    android:layout_height="140dp"/>
+
+    <ImageView
+        android:id="@+id/view_closet2"
+        android:layout_below="@+id/view_closet"
+
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_width="200dp"
+        android:layout_height="140dp"/>
+    <ImageView
+        android:id="@+id/view_closet3"
+        android:layout_below="@+id/view_closet2"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_width="200dp"
+        android:layout_height="140dp"/>
+    <ImageView
+        android:id="@+id/view_closet4"
+        android:layout_below="@+id/view_closet3"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_width="200dp"
+        android:layout_height="140dp"/>
+
+    <FrameLayout
+        android:id="@+id/fl_top"
+    android:layout_width="135dp"
+    android:layout_height="140dp">
 
     <RadioGroup
         android:id="@+id/rdg_closet"
         android:layout_gravity="center_vertical"
-        android:gravity="center"
+
         android:layout_width="135dp"
         android:layout_height="match_parent">
 
         <RadioButton
-            android:id="@+id/rb_sunny"
-            android:text="Sunny/Warm"
+            android:id="@+id/rb_accessory1"
+            android:text="Accessory 1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <RadioButton
-            android:id="@+id/rb_rainy"
-            android:text="Rainy"
+            android:id="@+id/rb_accessory2"
+            android:text="Accessory 2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <RadioButton
-            android:id="@+id/rb_cold"
-            android:text="Cold"
+            android:id="@+id/rb_accessory3"
+            android:text="Accessory 3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <RadioButton
+            android:id="@+id/rb_accessory4"
+            android:text="Accessory 4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </RadioGroup>
+
+</FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_two"
+        android:layout_below="@+id/fl_top"
+        android:layout_width="135dp"
+        android:layout_height="140dp">
+
+        <RadioGroup
+            android:id="@+id/rdg_closet2"
+            android:layout_gravity="center_vertical"
+            android:layout_width="135dp"
+            android:layout_height="match_parent">
+
+            <RadioButton
+                android:id="@+id/rb_tops1"
+                android:text="White Tee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <RadioButton
+                android:id="@+id/rb_tops2"
+                android:text="Band Tee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <RadioButton
+                android:id="@+id/rb_tops3"
+                android:text="Formal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <RadioButton
+                android:id="@+id/rb_tops4"
+                android:text="Active"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </RadioGroup>
+
+    </FrameLayout>
+    <FrameLayout
+    android:layout_below="@+id/fl_two"
+    android:id="@+id/fl_three"
+    android:layout_width="135dp"
+    android:layout_height="140dp">
+
+    <RadioGroup
+        android:id="@+id/rdg_closet3"
+        android:layout_gravity="center_vertical"
+
+        android:layout_width="135dp"
+        android:layout_height="match_parent">
+
+        <RadioButton
+            android:id="@+id/rb_pants1"
+            android:text="Jeans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <RadioButton
+            android:id="@+id/rb_pants2"
+            android:text="Casual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <RadioButton
+            android:id="@+id/rb_pants3"
+            android:text="Formal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <RadioButton
+            android:id="@+id/rb_pants4"
+            android:text="Active"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
     </RadioGroup>
 
     </FrameLayout>
+
+    <FrameLayout
+        android:layout_below="@+id/fl_three"
+        android:id="@+id/fl_four"
+        android:layout_width="135dp"
+        android:layout_height="140dp">
+
+    <RadioGroup
+        android:id="@+id/rdg_closet4"
+        android:layout_gravity="center_vertical"
+
+        android:layout_width="135dp"
+        android:layout_height="match_parent">
+
+        <RadioButton
+            android:id="@+id/rb_bottom1"
+            android:text="Sneakers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <RadioButton
+            android:id="@+id/rb_bottom2"
+            android:text="Boots"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <RadioButton
+            android:id="@+id/rb_bottom3"
+            android:text="Formal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <RadioButton
+            android:id="@+id/rb_bottom4"
+            android:text="Active"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </RadioGroup>
+
+    </FrameLayout>
+
 
 
 </RelativeLayout>
